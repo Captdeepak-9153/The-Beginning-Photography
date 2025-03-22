@@ -79,25 +79,26 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 nav {
   position: fixed;
   isolation: isolate;
   top: 0;
-  width: 100%;
-  max-width: var(--max-width);
-  margin: auto;
-  z-index: 9;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .nav__header {
-  padding: 1rem;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background-color: var(--white); /* Changed to white */
+  background-color: var(--white);
+  /* Changed to white */
 }
 
 .nav__logo img {
@@ -106,7 +107,8 @@ nav {
 
 .nav__menu__btn {
   font-size: 1.5rem;
-  color: var(--text-dark); /* Changed to dark text color */
+  color: var(--text-dark);
+  /* Changed to dark text color */
   cursor: pointer;
 }
 
@@ -119,7 +121,8 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: var(--white); /* Changed to white */
+  background-color: var(--white);
+  /* Changed to white */
   transform: translateY(-100%);
   transition: 0.5s;
   z-index: -1;
@@ -136,38 +139,50 @@ nav {
 .nav__links a {
   padding-bottom: 5px;
   font-weight: 500;
-  color: var(--text-dark); /* Changed to dark text color */
+  color: var(--white);
+  /* Changed to dark text color */
   border-bottom: 2px solid transparent;
 }
 
 .nav__links a:hover {
-  border-color: var(--text-dark); /* Changed to dark text color */
+  border-color: var(--white);
+  /* Changed to dark text color */
 }
 
 .whatsapp-button {
   position: fixed;
-  bottom: 20px; /* Adjust this value to change the button's vertical position */
-  right: 20px; /* Adjust this value to change the button's horizontal position */
-  z-index: 1000; /* Ensure the button appears above other content */
+  bottom: 20px;
+  /* Adjust this value to change the button's vertical position */
+  right: 20px;
+  /* Adjust this value to change the button's horizontal position */
+  z-index: 1000;
+  /* Ensure the button appears above other content */
 }
 
 .whatsapp-button a {
   display: block;
-  padding: 20px; /* Increase the padding for a larger button */
-  background-color: #25D366; /* WhatsApp green color */
+  padding: 20px;
+  /* Increase the padding for a larger button */
+  background-color: #25D366;
+  /* WhatsApp green color */
   border-radius: 50%;
   text-align: center;
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect */
 }
 
 .whatsapp-button a:hover {
-  transform: scale(1.1); /* Scale up the button slightly on hover */
+  transform: scale(1.1);
+  /* Scale up the button slightly on hover */
 }
 
 .whatsapp-button i {
-  color: #fff; /* White color for the WhatsApp icon */
-  font-size: 24px; /* Increase the icon size */
+  color: #fff;
+  /* White color for the WhatsApp icon */
+  font-size: 24px;
+  /* Increase the icon size */
 }
+
 .about__container .section__description {
   max-width: 900px;
   margin-inline: auto;
@@ -211,12 +226,15 @@ nav {
 .portfolio__card:nth-child(3)::after {
   content: "Bride";
 }
+
 .portfolio__card:nth-child(4)::after {
   content: "pre-wedding";
 }
+
 .portfolio__card:nth-child(5)::after {
   content: "Ring-Ceremony";
 }
+
 .portfolio__card:nth-child(6)::after {
   content: "Birthday";
 }
@@ -523,13 +541,17 @@ nav {
   }
 
   nav {
-    padding: 2rem 1rem;
-    position: static;
-    max-width: 900px;
+    padding: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--white); /* Added background color for laptop screen size */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
+    backdrop-filter: blur(5px);
+    /* Glass effect */
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   .nav__header {
@@ -552,7 +574,8 @@ nav {
 
   .nav__links .nav__logo img {
     max-width: 150px;
-    content: url("assets/The Beginning Photography Logo.png"); /* Change logo for larger screens */
+    content: url("assets/The Beginning Photography Logo.png");
+    /* Change logo for larger screens */
   }
 
   .portfolio__grid {
